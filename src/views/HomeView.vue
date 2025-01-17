@@ -1,9 +1,11 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <main>
+        {{ user }}
+    </main>
 </template>
+
+<script setup>
+import { useAuth } from '@/composables/useAuth';
+
+const { user } = useAuth();
+</script>
